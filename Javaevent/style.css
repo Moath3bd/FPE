@@ -1,0 +1,46 @@
+.stylebutton{
+    background-color: yellow;
+    width: 55%;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    
+}
+#flagContainer {
+    margin-top: 20px;
+    display: none;
+}
+#hiddenText {
+    display: none;
+    margin-top: 10px;
+    
+}
+
+#infoContainer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: inline-block;
+}
+#NoBack{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: blue;
+}
+#NoBack:hover{
+color: blueviolet;
+}
+#NoBack:On{
+    color: red;
+}
+#styledText{
+    width: 100%;
+    height: 100px;
+}
+#colorBox {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    border: 1px solid #000;
+  }

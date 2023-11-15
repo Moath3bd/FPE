@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <button id="colorButton" type="button">Hello World!</button>
+        <br/>   <br/>
+        <SELect id="countrySelect" onchange="showFlag()">
+        <option>Jordan</option>
+        <option>Kuwait</option>
+        <option>Qatar</option>
+        <option>UAE</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Syria</option>
+        <option>Mexico</option>
+        <option>Australia</option>
+        <option>Italy</option>
+    </SELect>
+
+    <div id="flagContainer">
+        <img id="flagImage" src="#" alt="Country Flag">
+    </div>
+    <br/>
+
+       
+    <label for="password1">Password (Min 6 characters)</label>
+    <input type="password" id="password1" name="password1" required oninput="validatePassword()" />
+    <br/>
+
+    <label for="password2">Password (Confirm)</label>
+    <input type="password" id="password2" name="password2" required oninput="validatePassword()" />
+    <br/>
+
+    <div id="passwordMessage"></div>
+
+    <button type="submit" id="submitButton" style="display: none;">Submit</button>
+    <br/>
+    <div id="infoContainer">
+        <p id="infoHeading">What is Lorem Ipsum?
+            <button id="NoBack" onmouseover="style.color='red'" onclick="showText()">Show</button>
+        </p>
+        <div id="hiddenText">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book in slide way and in the end hide to hide this text.
+           
+                <button id="NoBack" onclick="hideText()">Hide</button>
+            </p>
+        </div>
+    </div>
+    <br/>
+        <br/>
+
+  <label for="fontFamilySelect">Font Family:</label>
+  <select id="fontFamilySelect" onchange="updateTextArea()">
+    <option value="Arial">Arial</option>
+    <option value="Times New Roman">Times New Roman</option>
+  </select>
+
+  <label for="fontSizeSelect">Font Size:</label>
+  <select id="fontSizeSelect" onchange="updateTextArea()">
+    <option value="10">10</option>
+    <option value="12">12</option>
+    <option value="15">15</option>
+  </select>
+
+  <label for="ItalicCheckbox">Italic</label>
+  <input type="checkbox" id="ItalicCheckbox" name="Italic" onchange="updateTextArea()">
+
+  <label for="BoldCheckbox">Bold</label>
+  <input type="checkbox" id="BoldCheckbox" name="Bold" onchange="updateTextArea()">
+
+  <label for="UnderlineCheckbox">Underline</label>
+  <input type="checkbox" id="UnderlineCheckbox" name="Underline" onchange="updateTextArea()">
+
+  <textarea id="styledText"></textarea>
+
+
+    </form>
+
+
+    <div id="colorBox"></div>
+
+
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>
