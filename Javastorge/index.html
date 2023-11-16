@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storge</title>
+    <script src="Javascript.js"></script>
+</head>
+<body>
+    <form>
+        <label for="name">Your name</label>
+        <input type="text" name="name">
+<br/>
+        <label for="Age">Your Age</label>
+        <input type="text" name="Age">
+<br/>
+        <label for="Gender">Gender  
+<input type="radio" name="Gender" id="male">male
+<input type="radio" name="Gender" id="Female">Female
+</label><br/>
+<textarea>Brief Description</textarea>
+<br/>
+<label for="Major">Your Major</label>
+<input type="text" name="Major" id="Major"><br/>
+<label for="UN">Your University</label>
+<input type="text" name="UN" id="UN"><br/>
+<label for="PL">Your Programming Language</label>
+<input type="checkbox" name="PL" id="c++">C++
+<input type="checkbox" name="PL" id="Java">Java
+<input type="checkbox" name="PL" id="php">PHP
+<input type="checkbox" name="PL" id="python">Python
+<br/>
+<button type="submit" name="submit" value="submit">Submit</button>
+</form>
+<form id="projectForm">
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject">
+    <br/>
+    <label for="description">Description</label><br/>
+    <textarea name="description" id="projectDescription">Brief Project Description</textarea>
+    <br/>
+    <label for="userTypes">User Types</label>
+    <input type="text" name="userTypes" id="userTypes">
+    <br/>
+    <label for="technologyUsed">Technology Used</label>
+    <input type="text" name="technologyUsed" id="technologyUsed">
+    <br/>
+    <button type="button" onclick="saveProject()">Submit</button>
+</form>
+</body>
+</html>   
