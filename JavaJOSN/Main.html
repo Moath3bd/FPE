@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        #nameOutput {
+            background-color: red;
+        }
+
+        #emailOutput {
+            background-color: green;
+        }
+
+        #numberOutput {
+            background-color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+
+        <label for="number">Number:</label>
+        <input type="tel" id="number" name="number" required>
+
+        <br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+
+    <div id="output">
+        <p id="nameOutput"></p>
+        <p id="emailOutput"></p>
+        <p id="numberOutput"></p>
+        <table id="dataTable"></table>
+    </div>
+
+    <script>
+        function submitForm() 
+        {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
+
+            document.getElementById('nameOutput').innerText = 'Name: ' + name;
+            document.getElementById('emailOutput').innerText = 'Email: ' + email;
+            document.getElementById('numberOutput').innerText = 'Number: ' + number;
+
+            var table = document.createElement('table');
+            table.id = 'dataTable';
+
+            var tr1 = table.insertRow();
+            var th1 = tr1.insertCell(0);
+            th1.innerHTML = '<b>Name</b>';
+            var td1 = tr1.insertCell(1);
+            td1.innerText = name;
+
+            var tr2 = table.insertRow();
+            var th2 = tr2.insertCell(0);
+            th2.innerHTML = '<b>Email</b>';
+            var td2 = tr2.insertCell(1);
+            td2.innerText = email;
+
+            var tr3 = table.insertRow();
+            var th3 = tr3.insertCell(0);
+            th3.innerHTML = '<b>Number</b>';
+            var td3 = tr3.insertCell(1);
+            td3.innerText = number;
+
+            document.getElementById('output').appendChild(table);
+        }
+    </script>
+
+</body>
+</html>

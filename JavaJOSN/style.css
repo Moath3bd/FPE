@@ -1,0 +1,9 @@
+#table-container {
+    display: none;
+  }
+
+  #toggle-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
